@@ -1,0 +1,7 @@
+matplotlib==2.2.2
+pandas==0.22.0
+requests==2.18.4
+numpy==1.14.2
+Flask==0.12.2
+scikit_learn==0.19.1
+scipy==0.19.1
