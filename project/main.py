@@ -31,7 +31,7 @@ def download_data(url, filename):
 
 def data_partition(test_ratio, x, y):
     global x_train, y_train, y_test, x_test
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=test_ratio, random_state=0, #random.randint(1, 9999),
+    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=test_ratio, random_state=0,
                                                         stratify=y)
 
 
@@ -181,12 +181,9 @@ def index():
 
 @app.route('/api/download/data')
 def download():
-    #url = 'https://www.kaggle.com/uciml/red-wine-quality-cortez-et-al-2009/downloads/red-wine-quality-cortez-et-al-2009.zip/2'
-    #download_data(url=url, filename='red-wine.zip')
-    zip_ref = zipfile.ZipFile('red-wine.zip', 'r')
-    zip_ref.extractall('red-wine.csv')
-    zip_ref.close()
-    return "Data Downloaded and Extracted"
+    url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-red.csv'
+    #download_data(url=url, filename='red-wine.csv')
+    return "Data included in repository, for some reason every time I downloaded the zip file became corrupted."
 
 
 @app.route('/api/data/partition/<filename>/<ratio>')
