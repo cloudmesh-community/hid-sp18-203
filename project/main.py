@@ -2,11 +2,10 @@ import requests
 import matplotlib
 matplotlib.use('agg')
 from flask import Flask
-from flask import Response
+from flask import Response, request
 import numpy as np
 from sklearn.externals.joblib import Memory
 from os import listdir
-from flask import Flask, request
 import pandas as pd
 import random
 import numpy as np
